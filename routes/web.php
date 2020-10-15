@@ -18,3 +18,7 @@ Route::get('/', [ToDoListController::class, 'index']);
 Route::post('/add', [ToDoListController::class, 'create']);
 
 Route::get('/add', [ToDoListController::class, 'create']);
+
+Route::get('/foo', function () {
+    return 'Hello World';
+});
