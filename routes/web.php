@@ -15,10 +15,7 @@ use App\Http\Controllers\ToDoListController;
 */
 
 Route::get('/', [ToDoListController::class, 'index']);
-Route::post('/add', [ToDoListController::class, 'create']);
+Route::put('/', [ToDoListController::class, 'create']);
+Route::delete('/', [ToDoListController::class, 'delete']);
 
-Route::get('/add', [ToDoListController::class, 'create']);
-
-Route::get('/foo', function () {
-    return 'Hello World';
-});
+Route::get('/test', function () { return 'Page de test';});

@@ -31,4 +31,11 @@ class ToDoListController extends Controller
 
         return response()->json($description,201);
     }
+
+    public function  delete(Request $request)
+    {
+        $id = $request->input('id');
+        DB::table('todo_lists')->where('id', $id)->delete();
+        return response()->json('element delete',202);
+    }
 }
