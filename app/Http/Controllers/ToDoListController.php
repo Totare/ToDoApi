@@ -22,14 +22,15 @@ class TodoListController extends Controller
         ]);
 
         $description = $request->input('description');
-        DB::table('todo_lists')->insertGetId(
+        $id = DB::table('todo_lists')->insertGetId(
             [
                 'description' => $request->input('description'),
                 'created_at' => now()
             ]
         );
+        $data = ['id' => $id, 'description' => $description];
 
-        return response()->json($description,201);
+        return response()->json($data,201);
     }
 
     public function  delete(Request $request)
