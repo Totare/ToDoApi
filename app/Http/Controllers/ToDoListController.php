@@ -6,7 +6,7 @@ use App\Models\TodoList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ToDoListController extends Controller
+class TodoListController extends Controller
 {
     public function index()
     {

@@ -14,8 +14,8 @@ use App\Http\Controllers\ToDoListController;
 |
 */
 
-Route::get('/', [ToDoListController::class, 'index']);
-Route::put('/', [ToDoListController::class, 'create']);
-Route::delete('/', [ToDoListController::class, 'delete']);
+Route::get('/', [TodoListController::class, 'index']);
+Route::put('/', [TodoListController::class, 'create']);
+Route::delete('/', [TodoListController::class, 'delete']);
 
 Route::get('/test', function () { return 'Page de test';});
